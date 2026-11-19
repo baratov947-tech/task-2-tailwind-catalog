@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+    :root {
+        --sa-bg: #0b0d10;
+        --sa-panel: #14181f;
+        --sa-border: #2a313d;
+        --sa-accent: #f5b82e;
+        --sa-accent-hover: #ffd15c;
+        --sa-money: #4ade80;
+        --sa-text: #f3f4f6;
+        --sa-muted: #9ca3af;
+    }
+
+    body {
+        background-color: var(--sa-bg);
+        color: var(--sa-text);
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif, system-ui;
+        letter-spacing: 0.02em;
+    }
+}
+
+.sa-panel {
+    background-color: var(--sa-panel);
+    border: 2px solid var(--sa-border);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.65);
+}
+
+.sa-card-hover {
+    transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.sa-card-hover:hover {
+    transform: translateY(-3px);
+    border-color: var(--sa-accent);
+    box-shadow: 0 14px 28px rgba(245, 184, 46, 0.14);
+}
+
+.sa-btn {
+    background-color: var(--sa-accent);
+    color: #111317;
+    border: 2px solid #000000;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 3px 0 #000000;
+    transition: transform 0.1s ease, background-color 0.15s ease;
+}
+
+.sa-btn:hover {
+    background-color: var(--sa-accent-hover);
+}
+
+.sa-btn:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 0 #000000;
+}
